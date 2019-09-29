@@ -13,26 +13,26 @@
         <img class="img-fluid" alt="Responsive image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png" />
       </div>
     </div>
-    <form>
+    <form action="/search" method="post">
       <div id="search-form" class="container">
         <div class="row justify-content-md-center">
           <div class="col-8">
-            <label for="search-bar">Search for route or stop</label>
-            <input type="text" class="form-control form-control-lg" id="search-bar" aria-describedby="search-bar" placeholder="Search">
+            <label for="search">Search for route or stop</label>
+            <input type="text" class="form-control form-control-lg" id="search" name="q" aria-describedby="search" placeholder="Search">
           </div>
         </div>
         <div class="row justify-content-md-center">
           <div class="col-6">
             <div class="alert alert-secondary form-check-inline">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-              <label class="form-check-label" for="exampleRadios1">
-                Default radio
+              <input class="form-check-input" type="radio" name="o" id="option1" value="1" checked>
+              <label class="form-check-label" for="option1">
+                Search Term
               </label>
             </div>
             <div class="alert alert-secondary form-check-inline">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-              <label class="form-check-label" for="exampleRadios2">
-                Second default radio
+              <input class="form-check-input" type="radio" name="o" id="option2" value="2">
+              <label class="form-check-label" for="option2">
+                Naptan Code
               </label>
             </div>
           </div>
