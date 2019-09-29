@@ -20,17 +20,16 @@ def search():
     return render_template("search.html", results=results, len_results=len(results), search_term=search_term)
 
 
-@app.route("/stop/<ATCO>/time/next_bus")
-def next_bus(ATCO):
-
-    url = "http://transportapi.com/v3/uk/stop/" + ATCO + "live.json" +
-    return render_template("next_bus.html", url = )
-
-
-
-@app.route("/stop/<ATCO>/time/<time>")
-def time_bus(ATCO, time):
-    pass
+@app.route("/stop/<ATCO>/", methods=["POST"])
+def next_bus(ATCO, date, time):
+    date = request.form["date"]
+    time = request.form["time"]
+    print(date, time)
+    date = "now"
+    time = "now"
+    search_request.atco_code = ATCO
+    time_data = search_request.get_times(date, time)
+    return render_template("next_bus.html")
 
 
 if __name__ == "__main__":
