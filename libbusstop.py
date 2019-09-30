@@ -1,15 +1,31 @@
 import sqlite3
 import urllib.request
 import json
+from flask import session
+
+
+def load_data():
+    if "session_data" in session:
+        session_data = NewRequest(session["atco"], session["], session[""])
+        session_data = session["session_data"]
+    else:
+        session_data = NewRequest("", [], [])
+    return session_data
+
+
+def save_data(session_data):
+    session["atco"] = session_data.atco_code
+    session["times_data"] = session_data.times_data
+    session["search_results"] = session_data.search_results
 
 
 class NewRequest:
-    def __init__(self):
+    def __init__(self, atco, times_data, search_results):
         self.api_key = "077475e1973c1ff5bb3d52e0ba6e63ca"
         self.app_id = "b13c7b6d"
-        self.atco_code = ""
-        self.times_data = []
-        self.search_results = []
+        self.atco_code = atco
+        self.times_data = times_data
+        self.search_results = search_results
 
     def search_db(self, search_term, search_term_type):
         conn = sqlite3.connect("naptan_data.db")
