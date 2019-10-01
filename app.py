@@ -16,7 +16,7 @@ def search():
     option = request.form["o"]
     session_data.search_db(search_term, option)
     results = session_data.search_results
-    libbusstop.save_data(session_data)
+    session_data.save_data()
     return render_template("search.html", results=results, len_results=len(results), search_term=search_term)
 
 
@@ -29,9 +29,9 @@ def next_bus(atco):
     print(date, time, time_type)
     session_data.atco_code = atco
     session_data.get_times(date, time, time_type)
-    times_data = session_data.times_data
-    libbusstop.save_data(session_data)
-    return render_template("next_bus.html", times_data=times_data)
+    json_data = session_data.json_data
+    session_data.save_data()
+    return render_template("next_bus.html", json_data=json_data)
 
 
 if __name__ == "__main__":

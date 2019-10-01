@@ -5,26 +5,19 @@ from flask import session
 
 
 def load_data():
-    if "session_data" in session:
-        session_data = NewRequest(session["atco"], session["], session[""])
-        session_data = session["session_data"]
+    if "atco" in session:
+        session_data = NewRequest(session["atco"], session["search_results"], session["json_data"])
     else:
         session_data = NewRequest("", [], [])
     return session_data
 
 
-def save_data(session_data):
-    session["atco"] = session_data.atco_code
-    session["times_data"] = session_data.times_data
-    session["search_results"] = session_data.search_results
-
-
 class NewRequest:
-    def __init__(self, atco, times_data, search_results):
+    def __init__(self, atco, json_data, search_results):
         self.api_key = "077475e1973c1ff5bb3d52e0ba6e63ca"
         self.app_id = "b13c7b6d"
         self.atco_code = atco
-        self.times_data = times_data
+        self.json_data = json_data
         self.search_results = search_results
 
     def search_db(self, search_term, search_term_type):
@@ -51,5 +44,19 @@ class NewRequest:
         return
 
     def get_times(self, date, time, time_type):
-        self.times_data = []
-        pass
+        self.json_data = []
+        url = []
+        if time_type == "next":
+            url = f"https://transportapi.com/v3/uk/bus/stop/{self.atco_code}/live.json?api_key={self.api_key}&app_id={self.app_id}"
+            print(url)
+        elif time_type == "specific":
+            url = f"https://transportapi.com/v3/uk/bus/stop/{self.atco_code}/{date}/{time}/timetable.json?api_key={self.api_key}&app_id={self.app_id}"
+        json_data = json.load(urllib.request.urlopen(url))
+        print(json_data)
+        self.json_data = json_data
+        return
+
+    def save_data(self):
+        session["atco"] = self.atco_code
+        session["times_data"] = self.times_data
+        session["search_results"] = self.search_results
