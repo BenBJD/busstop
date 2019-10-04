@@ -35,7 +35,7 @@ header h2 {
     margin-top: 20px;
 }
 
-.search-result .col-md-2 {
+.search-result .col-md-3 {
     border-right: 1px dotted #ccc;
     min-height: 140px;
 }
@@ -46,7 +46,7 @@ header h2 {
 }
 
 .search-result ul li {
-    font: 400 normal 1em "Roboto", Arial, Verdana, sans-serif;
+    font: 400 normal 1em "Roboto",, sans-serif;
     line-height: 30px;
 }
 
@@ -59,7 +59,7 @@ header h2 {
 }
 
 .search-result h3 {
-    font: 500 normal 1.375em "Roboto", Arial, Verdana, sans-serif;
+    font: 500 normal 1.375em "Roboto", sans-serif;
     margin-top: 0 !important;
     margin-bottom: 10px !important;
     color: #248dc1 !important;
@@ -74,7 +74,7 @@ header h2 {
 }
 
 .search-result p {
-    font: normal normal 1.125em "Roboto", Arial, Verdana, sans-serif;
+    font: normal normal 1.125em "Roboto", sans-serif;
 }
 
 .search-result span.plus {
@@ -105,7 +105,8 @@ header h2 {
 
 body {
     background-color: #282C34;
-    color: #e5e5e5
+    color: #e5e5e5;
+    font-family: "Roboto", sans-serif !important;
 }
 
 .form-control {

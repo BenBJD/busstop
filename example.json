@@ -1,5 +1,16 @@
 {
   'atcocode': '2400A043150A',
+  'smscode': 'kntdtmwg',
+  'request_time': '2019-10-04T10:31:54+01:00',
+  'name': 'Church Lane',
+  'stop_name': 'Church Lane',
+  'bearing': 'NE',
+  'indicator': 'opp',
+  'locality': 'Petham',
+  'location': {
+    'type': 'Point',
+    'coordinates': [1.04573, 51.22298]
+  },
   'departures': {
     '620': [
       {
@@ -8,17 +19,17 @@
         'line_name': '620',
         'direction': 'Canterbury, Bus Station',
         'operator': 'RGNT',
-        'date': '2019-10-01',
+        'date': '2019-10-04',
         'expected_departure_date': None,
-        'aimed_departure_time': '17:00',
+        'aimed_departure_time': '13:26',
         'expected_departure_time': None,
-        'best_departure_estimate': '17:00',
+        'best_departure_estimate': '13:26',
         'source': 'NextBuses',
         'dir': 'inbound',
         'operator_name': 'Regent Coaches',
-        'id': 'https://transportapi.com/v3/uk/bus/route/RGNT/620/inbound/2400A043150A/2019-10-01/17:00/timetable.json?app_id=b13c7b6d&app_key=077475e1973c1ff5bb3d52e0ba6e63ca'
+        'id': 'https://transportapi.com/v3/uk/bus/route/RGNT/620/inbound/2400A043150A/2019-10-04/13:26/timetable.json?app_id=b13c7b6d&app_key=077475e1973c1ff5bb3d52e0ba6e63ca'
       }
     ]
   },
-  'source': 'NextBuses (cached)'
+  'source': 'NextBuses'
 }

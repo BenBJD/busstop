@@ -31,7 +31,12 @@ def next_bus(atco):
     session_data.get_times(date, time, time_type)
     json_data = session_data.json_data
     session_data.save_data()
-    return render_template("next_bus.html", json_data=json_data)
+    route_count = len(json_data["departures"])
+    time_count = 0
+    for i in json_data["departures"]:
+        for j in i:
+            time_count += 1
+    return render_template("next_bus.html", json_data=json_data, time_count=time_count, route_count=route_count)
 
 
 if __name__ == "__main__":
