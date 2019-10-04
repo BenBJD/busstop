@@ -12,7 +12,7 @@
 
   <header class="mb20">
     <h1>Next Buses</h1>
-    <h2><strong class="text-danger">{{ route_count }}</strong> routes were found with <strong class="text-danger">{{ time_count }}</strong> Stops</h2>
+    <h2><strong class="text-danger">{{ route_count }}</strong> routes were found at <strong class="text-danger">{{ atco }}</strong></h2>
   </header>
 
   <div class="col-xs-12 col-sm-6 col-md-12">
@@ -21,9 +21,9 @@
     <div class="search-result row">
       <div class="col-xs-12 col-sm-12 col-md-3">
         <ul class="meta-search">
-          <li><span>Line:  {{ json_date["departures"][i][0]["line"] }}</span></li>
-          <li><span>Operator:  {{ json_date["departures"][i][0]["operator_name"] }}</span></li>
-          <li><span>Direction:  {{ json_date["departures"][i][0]["direction"] }}</span></li>
+          <li><span>Line:  {{ json_data["departures"][i][0]["line"] }}</span></li>
+          <li><span>Operator:  {{ json_data["departures"][i][0]["operator_name"] }}</span></li>
+          <li><span>Direction:  {{ json_data["departures"][i][0]["direction"] }}</span></li>
         </ul>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-7">
