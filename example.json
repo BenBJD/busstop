@@ -1,17 +1,126 @@
 {
-  'atcocode': '2400A043150A',
-  'smscode': 'kntdtmwg',
-  'request_time': '2019-10-04T10:31:54+01:00',
-  'name': 'Church Lane',
-  'stop_name': 'Church Lane',
-  'bearing': 'NE',
-  'indicator': 'opp',
-  'locality': 'Petham',
+  'atcocode': '240096689',
+  'smscode': 'kntgmdag',
+  'request_time': '2019-10-04T15:45:56+01:00',
+  'name': "Simon Langton Boys' School Grounds (in)",
+  'stop_name': "Simon Langton Boys' School Grounds",
+  'bearing': 'W',
+  'indicator': 'in',
+  'locality': 'Nackington, Canterbury',
   'location': {
     'type': 'Point',
-    'coordinates': [1.04573, 51.22298]
+    'coordinates': [
+      1.08415,
+      51.26108
+    ]
   },
   'departures': {
+    '951': [
+      {
+        'mode': 'bus',
+        'line': '951',
+        'line_name': '951',
+        'direction': 'Canterbury Bus Stn',
+        'operator': 'SCEK',
+        'date': '2019-10-04',
+        'expected_departure_date': '2019-10-04',
+        'aimed_departure_time': '15:50',
+        'expected_departure_time': '15:50',
+        'best_departure_estimate': '15:50',
+        'source': 'NextBuses',
+        'dir': 'inbound',
+        'operator_name': 'Stagecoach in East Kent',
+        'id': 'https://transportapi.com/v3/uk/bus/route/SCEK/951/inbound/240096689/2019-10-04/15:50/timetable.json?app_id=b13c7b6d&app_key=077475e1973c1ff5bb3d52e0ba6e63ca'
+      }
+    ],
+    '18': [
+      {
+        'mode': 'bus',
+        'line': '18',
+        'line_name': '18',
+        'direction': 'Canterbury, Bus Station',
+        'operator': 'SCEK',
+        'date': '2019-10-04',
+        'expected_departure_date': None,
+        'aimed_departure_time': '15:50',
+        'expected_departure_time': None,
+        'best_departure_estimate': '15:50',
+        'source': 'NextBuses',
+        'dir': 'inbound',
+        'operator_name': 'Stagecoach in East Kent',
+        'id': 'https://transportapi.com/v3/uk/bus/route/SCEK/18/inbound/240096689/2019-10-04/15:50/timetable.json?app_id=b13c7b6d&app_key=077475e1973c1ff5bb3d52e0ba6e63ca'
+      },
+      {
+        'mode': 'bus',
+        'line': '18',
+        'line_name': '18',
+        'direction': 'Hythe, Red Lion Square',
+        'operator': 'SCEK',
+        'date': '2019-10-04',
+        'expected_departure_date': None,
+        'aimed_departure_time': '16:18',
+        'expected_departure_time': None,
+        'best_departure_estimate': '16:18',
+        'source': 'NextBuses',
+        'dir': 'outbound',
+        'operator_name': 'Stagecoach in East Kent',
+        'id': 'https://transportapi.com/v3/uk/bus/route/SCEK/18/outbound/240096689/2019-10-04/16:18/timetable.json?app_id=b13c7b6d&app_key=077475e1973c1ff5bb3d52e0ba6e63ca'
+      }
+    ],
+    '904': [
+      {
+        'mode': 'bus',
+        'line': '904',
+        'line_name': '904',
+        'direction': 'Westbrook Farm Sea S',
+        'operator': 'SCEK',
+        'date': '2019-10-04',
+        'expected_departure_date': '2019-10-04',
+        'aimed_departure_time': '15:50',
+        'expected_departure_time': '15:50',
+        'best_departure_estimate': '15:50',
+        'source': 'NextBuses',
+        'dir': 'inbound',
+        'operator_name': 'Stagecoach in East Kent',
+        'id': 'https://transportapi.com/v3/uk/bus/route/SCEK/904/inbound/240096689/2019-10-04/15:50/timetable.json?app_id=b13c7b6d&app_key=077475e1973c1ff5bb3d52e0ba6e63ca'
+      }
+    ],
+    '5': [
+      {
+        'mode': 'bus',
+        'line': '5',
+        'line_name': '5',
+        'direction': 'Yorkletts, Plumpudding Lane (unmarked)',
+        'operator': 'SCEK',
+        'date': '2019-10-04',
+        'expected_departure_date': None,
+        'aimed_departure_time': '15:55',
+        'expected_departure_time': None,
+        'best_departure_estimate': '15:55',
+        'source': 'NextBuses',
+        'dir': 'outbound',
+        'operator_name': 'Stagecoach in East Kent',
+        'id': 'https://transportapi.com/v3/uk/bus/route/SCEK/5/outbound/240096689/2019-10-04/15:55/timetable.json?app_id=b13c7b6d&app_key=077475e1973c1ff5bb3d52e0ba6e63ca'
+      }
+    ],
+    '911': [
+      {
+        'mode': 'bus',
+        'line': '911',
+        'line_name': '911',
+        'direction': 'Herne Bay Westcliff',
+        'operator': 'SCEK',
+        'date': '2019-10-04',
+        'expected_departure_date': '2019-10-04',
+        'aimed_departure_time': '15:55',
+        'expected_departure_time': '16:09',
+        'best_departure_estimate': '16:09',
+        'source': 'NextBuses',
+        'dir': 'inbound',
+        'operator_name': 'Stagecoach in East Kent',
+        'id': 'https://transportapi.com/v3/uk/bus/route/SCEK/911/inbound/240096689/2019-10-04/15:55/timetable.json?app_id=b13c7b6d&app_key=077475e1973c1ff5bb3d52e0ba6e63ca'
+      }
+    ],
     '620': [
       {
         'mode': 'bus',
@@ -21,15 +130,49 @@
         'operator': 'RGNT',
         'date': '2019-10-04',
         'expected_departure_date': None,
-        'aimed_departure_time': '13:26',
+        'aimed_departure_time': '16:13',
         'expected_departure_time': None,
-        'best_departure_estimate': '13:26',
+        'best_departure_estimate': '16:13',
         'source': 'NextBuses',
         'dir': 'inbound',
         'operator_name': 'Regent Coaches',
-        'id': 'https://transportapi.com/v3/uk/bus/route/RGNT/620/inbound/2400A043150A/2019-10-04/13:26/timetable.json?app_id=b13c7b6d&app_key=077475e1973c1ff5bb3d52e0ba6e63ca'
+        'id': 'https://transportapi.com/v3/uk/bus/route/RGNT/620/inbound/240096689/2019-10-04/16:13/timetable.json?app_id=b13c7b6d&app_key=077475e1973c1ff5bb3d52e0ba6e63ca'
+      },
+      {
+        'mode': 'bus',
+        'line': '620',
+        'line_name': '620',
+        'direction': 'Canterbury, Bus Station',
+        'operator': 'RGNT',
+        'date': '2019-10-04',
+        'expected_departure_date': None,
+        'aimed_departure_time': '17:10',
+        'expected_departure_time': None,
+        'best_departure_estimate': '17:10',
+        'source': 'NextBuses',
+        'dir': 'inbound',
+        'operator_name': 'Regent Coaches',
+        'id': 'https://transportapi.com/v3/uk/bus/route/RGNT/620/inbound/240096689/2019-10-04/17:10/timetable.json?app_id=b13c7b6d&app_key=077475e1973c1ff5bb3d52e0ba6e63ca'
+      }
+    ],
+    '18A': [
+      {
+        'mode': 'bus',
+        'line': '18A',
+        'line_name': '18A',
+        'direction': 'Ashford',
+        'operator': 'SCEK',
+        'date': '2019-10-04',
+        'expected_departure_date': '2019-10-04',
+        'aimed_departure_time': '16:23',
+        'expected_departure_time': '16:23',
+        'best_departure_estimate': '16:23',
+        'source': 'NextBuses',
+        'dir': 'outbound',
+        'operator_name': 'Stagecoach in East Kent',
+        'id': 'https://transportapi.com/v3/uk/bus/route/SCEK/18A/outbound/240096689/2019-10-04/16:23/timetable.json?app_id=b13c7b6d&app_key=077475e1973c1ff5bb3d52e0ba6e63ca'
       }
     ]
   },
-  'source': 'NextBuses'
+  'source': 'NextBuses (cached)'
 }

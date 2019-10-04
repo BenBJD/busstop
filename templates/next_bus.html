@@ -11,22 +11,34 @@
 <div class="container">
 
   <header class="mb20">
-    <h1></h1>
+    <h1>Next Buses</h1>
     <h2><strong class="text-danger">{{ route_count }}</strong> routes were found with <strong class="text-danger">{{ time_count }}</strong> Stops</h2>
   </header>
 
   <div class="col-xs-12 col-sm-6 col-md-12">
     <!-- Search results -->
     {% for i in json_data["departures"] %}
-    <div>
-      <h3>Route {{ i }}</h3>
-      {% for j in json_data["departures"][i] %}
-      <div class="col-xs-12 col-sm-12 col-md-7">
-        <ul>
-          <h5>{{ j["aimed_departure_time"] }}</h5>
+    <div class="search-result row">
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <ul class="meta-search">
+          <li><span>Line:  {{ json_date["departures"][i][0]["line"] }}</span></li>
+          <li><span>Operator:  {{ json_date["departures"][i][0]["operator_name"] }}</span></li>
+          <li><span>Direction:  {{ json_date["departures"][i][0]["direction"] }}</span></li>
         </ul>
       </div>
-      {% endfor %}
+      <div class="col-xs-12 col-sm-12 col-md-7">
+        <h3>Times</h3>
+        <ul class="list-group list-group-horizontal">
+        {% for j in json_data["departures"][i] %}
+          <li class="list-group-item">
+            <ul>
+              <li><span>{{ j["aimed_departure_time"] }}</span></li>
+              <li><span>{{ j["date"]}}</span></li>
+            </ul>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
     </div>
     {% endfor %}
   </div>

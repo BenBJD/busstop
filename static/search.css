@@ -122,3 +122,7 @@ body {
 #submit-n {
     margin-top: -5%;
 }
+
+.list-group-item {
+    background-color: #383D48;
+}

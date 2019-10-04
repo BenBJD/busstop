@@ -1,0 +1,16 @@
+{% for i in json_data["departures"] %}
+    <div class="row search-result">
+      <h3>Route {{ i }}</h3>
+    </div>
+    {% for j in json_data["departures"][i] %}
+    <div class="search-result row">
+      <div class="col-xs-12 col-sm-12 col-md-7">
+        <ul>
+          <li><h5>{{ j["aimed_departure_time"] }}</h5></li>
+          <li><h5>{{ j["date"] }}</h5></li>
+        </ul>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+    {% endfor %}
