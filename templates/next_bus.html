@@ -27,7 +27,7 @@
         </ul>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-7">
-        <h3>Times</h3>
+        <a href="/bus/{{ json_data['departures'][i][0]['operator'] }}/{{ json_data['departures'][i][0]['line'] }}/"><h3>Times</h3></a>
         <ul class="list-group list-group-horizontal">
         {% for j in json_data["departures"][i] %}
           <li class="list-group-item">

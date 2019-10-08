@@ -61,6 +61,7 @@ class NewRequest:
             print(url)
         elif time_type == "specific":
             url = f"https://transportapi.com/v3/uk/bus/stop/{self.atco_code}/{date}/{time}/timetable.json?api_key={self.api_key}&app_id={self.app_id}"
+            print(url)
         # Loading JSON data from URL
         json_data = json.load(urllib.request.urlopen(url))
         print(json_data)
