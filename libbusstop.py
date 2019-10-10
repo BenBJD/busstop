@@ -68,6 +68,10 @@ class NewRequest:
         self.json_data = json_data
         return
 
+    def get_bus_info(self, operator, line, date, time):
+        url = f"https://transportapi.com/v3/uk/bus/stop/{self.atco_code}/live.json?api_key={self.api_key}&app_id={self.app_id}"
+        print(url)
+
     # Saving data to cookie session storage
     def save_data(self):
         session["atco"] = self.atco_code
