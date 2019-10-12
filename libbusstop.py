@@ -7,19 +7,20 @@ from flask import session
 # Loading users NewRequest object from cookie session storage
 def load_data():
     if "atco" in session:
-        session_data = NewRequest(session["atco"], session["search_results"], session["json_data"])
+        session_data = NewRequest(session["atco"], session["search_results"], session["json_data"], session["timetable_data"])
     else:
-        session_data = NewRequest("", [], [])
+        session_data = NewRequest("", [], [], [])
     return session_data
 
 
 class NewRequest:
-    def __init__(self, atco, json_data, search_results):
+    def __init__(self, atco, json_data, search_results, timetable_data):
         self.api_key = "077475e1973c1ff5bb3d52e0ba6e63ca"
         self.app_id = "b13c7b6d"
         self.atco_code = atco
         self.json_data = json_data
         self.search_results = search_results
+        self.timetable_data = timetable_data
 
     def search_db(self, search_term, search_term_type):
         # Open SQLite cursor
@@ -68,9 +69,12 @@ class NewRequest:
         self.json_data = json_data
         return
 
-    def get_bus_info(self, operator, line, date, time):
-        url = f"https://transportapi.com/v3/uk/bus/stop/{self.atco_code}/live.json?api_key={self.api_key}&app_id={self.app_id}"
-        print(url)
+    def timetable(self, url):
+        self.timetable_data = []
+        timetable_data = json.load(urllib.request.urlopen(url))
+        print(timetable_data)
+        self.timetable_data = timetable_data
+        return
 
     # Saving data to cookie session storage
     def save_data(self):
@@ -78,3 +82,4 @@ class NewRequest:
         session["times_data"] = self.json_data
         session["search_results"] = self.search_results
         session["json_data"] = self.json_data
+        session["timetable_data"] = self.timetable_data

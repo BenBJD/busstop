@@ -8,38 +8,30 @@
     <title>BusStop</title>
   </head>
   <body>
-    <div id="header-image" class="container">
-      <div class="row justify-content-md-center">
-        <img class="img-fluid" alt="Responsive image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png" />
+    <header class="container">
+      <div style="margin-top: 5%;" class="row justify-content-md-center">
+        <div class="mx-auto" style="max-width: 40%;">
+          <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png"
+        </div>
       </div>
+    </header>
+    <div class="container">
+      <form action="/search" method="post">
+        <div class="row justify-content-md-center">
+          <div class="col-md-10">
+            <input type="text" class="form-control form-control-lg" id="search-form" name="q" placeholder="Search">
+          </div>
+        </div>
+        <div class="row justify-content-md-center" style="margin-top: 2%;">
+          <div class="col-md-4">
+             <button class="btn btn-lg btn-block" type="submit" name="o" value="1">Search Term</button>
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-lg btn-block" type="submit" name="o" value="2">Naptan Code</button>
+          </div>
+        </div>
+      </form>
     </div>
-    <form action="/search" method="post">
-      <div id="search-form" class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-8">
-            <label for="search">Search for route or stop</label>
-            <input type="text" class="form-control form-control-lg" id="search" name="q" aria-describedby="search" placeholder="Search">
-          </div>
-        </div>
-        <div class="row justify-content-md-center">
-          <div class="col-6">
-            <div class="alert alert-secondary form-check-inline">
-              <input class="form-check-input" type="radio" name="o" id="option1" value="1" checked>
-              <label class="form-check-label" for="option1">
-                Search Term
-              </label>
-            </div>
-            <div class="alert alert-secondary form-check-inline">
-              <input class="form-check-input" type="radio" name="o" id="option2" value="2">
-              <label class="form-check-label" for="option2">
-                Naptan Code
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
-
 
     <!-- Optional JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

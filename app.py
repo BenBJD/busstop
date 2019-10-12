@@ -50,11 +50,15 @@ def bus_at(atco, date, time):
     return render_template("next_bus.html", json_data=json_data, route_count=route_count, atco=session_data.atco_code)
 
 
-@app.route("/bus/<operator>/<line>/<dir>/<atco>/<date>/<time>")
-def line_info(operator, line, date, time):
+@app.route("/bus/<operator>/<line>/timetable", methods=["POST"])
+def timetable(operator, line):
     session_data = libbusstop.load_data()
-
+    url = request.form["url"]
+    session_data.timetable(url)
+    timetable_data = session_data.timetable_data
+    stops_num = len(timetable_data["stops"])
     session_data.save_data()
+    return render_template("timetable.html", timetable_data=timetable_data, stops_num=stops_num)
 
 
 if __name__ == "__main__":

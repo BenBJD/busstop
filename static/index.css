@@ -1,13 +1,5 @@
-#header-image {
-    max-width: 15%;
-    margin-top: 15%;
-}
 #search-form {
-    margin-top: 5%;
-}
-#search-bar {
-    background-color: #383D48;
-    border: 0;
+    margin-top: 10%;
 }
 body {
     background-color: #282C34;
@@ -16,10 +8,4 @@ body {
 .btn {
     background-color: #383D48;
     color: #e5e5e5;
-}
-.alert-secondary {
-    background-color:#383D48;
-    color: #e5e5e5;
-    border: 0;
-    margin-top: 5px
 }
